@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>This is title for page</title>
+    </head>
+    <body>
+        <a href="main.html">Page.link</a>
+        <form>
+            <pre>
+            <label>Enter id:</label>
+            <textarea id="data"></textarea>
+            <button id="submit" class="submit">Submit</button>
+            </pre>
+        </form>
+        <h1 class="t1">a</h1>
+        <h1 class="t1">b</h1>
+        <h1 class="t1">c</h1>
+        <script>
+           //document object
+           document.write("<h1> Title of Page="+document.title+"</h1>");
+           
+           document.write("<h1> Current URL="+document.URL+"</h1>");
+           
+           document.write("<h1> Reference URL="+document.referrer+"</h1>");
+           
+           if(document.referrer.includes("http://127.0.0.1:5500/BOM/main.html")){
+               document.write("<h1>came from Reference</h1>");
+           }
+           
+           document.write("<h1> Cookie= "+document.cookie+"</h1>");
+          
+           document.write("<h1>Msg</h1>");
+           document.write("<h1>for each query selector: </h1>");
+          
+           var t1s=document.querySelectorAll(".t1")
+           t1s.forEach(function(t){
+               document.write("<h1>"+t.textContent+"</h1>")
+           });
+
+
+
+           var button=document.getElementById("submit");
+           
+           button.addEventListener("click",function(){
+               /*
+               Anonymous functions are functions without a name, commonly used 
+               for short-lived operations like event handling or callbacks.
+               */
+               //var input=dataval.value;
+               //document.write("<h1>user val= "+input+"</h1>");
+               var dataval=document.getElementById("data");
+               document.write("<h1>dataval= "+dataval.value+"</h1>");
+           });
+            
+        </script>
+    </body>
+</html>
