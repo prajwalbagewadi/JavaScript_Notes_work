@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>This is title for page</title>
+    </head>
+    <body>
+        <a href="main.html">Page.link</a>
+        <script>
+            var name=window.prompt("hello user");
+            window.alert("WARNING! "+name);
+            window.confirm("confirm your action: "+name);
+            
+            console.log("hello world");
+            var msg="hello world";
+            document.write("<h1> JS var="+msg+"</h1>");
+            // window object
+            document.write("<h1> window.innerHeight="+window.innerHeight+"</h1>");
+            document.write("<h1> window.innerWidth="+window.innerWidth+"</h1>");
+            
+            document.write("<h1>current page url="+window.location.href+"</h1>");
+            document.write("<h1>window.open="+window.open("https://www.youtube.com","_blank")+"</h1>");
+            /*
+            <a target="_blank|_self|_parent|_top|framename">
+
+            _blank	Opens the linked document in a new window or tab
+            _self	Opens the linked document in the same frame as it was clicked (this is default)
+            _parent	Opens the linked document in the parent frame
+            _top	Opens the linked document in the full body of the window
+            framename	Opens the linked document in the named iframe
+            */
+        </script>
+    </body>
+</html>
