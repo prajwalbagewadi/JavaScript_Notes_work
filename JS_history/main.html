@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>mainpage</title>
+    </head>
+    <body>
+        <a href="page1.html">page1</a>
+        <a href="page2.html">page2</a>
+        <a href="page3.html">page3</a>
+        <button onclick="goForward()">forwardButton</button>
+        <button onclick="goto()">gotoButton</button>
+        <button onclick="goto2()">goto2Button</button>
+        <script>
+            function goForward(){
+                history.forward();
+            }
+            function goto(){
+                history.pushState({page:3},"Page 3","page3.html")
+                /*
+                Clicking the "Goto Button" will change the URL to page3.html 
+                without reloading the page, as it uses the pushState() method.
+                */
+            }
+            function goto2(){
+                history.replaceState({page:2}, "Page 2", "page2.html")
+            }
+            
+        </script>
+    </body>
+</html>
