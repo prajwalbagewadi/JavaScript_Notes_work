@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Page1</title>
+    </head>
+    <body>
+        <a href="main.html">main</a>
+        <a href="page2.html">page2</a>
+        <a href="page3.html">page3</a>
+        <button onclick="goBack()">backButton</button>
+        <button onclick="moveForward()">ForwardButtonSteps2</button>
+        <script>
+            function goBack(){
+                history.back();
+            }
+            function moveForward(){
+                //-2 to move backward
+                history.go(2);
+            }
+        </script>
+    </body>
+</html>
