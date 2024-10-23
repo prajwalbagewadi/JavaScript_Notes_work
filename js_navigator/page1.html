@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Main Page</title>
+    </head>
+    <body>
+        <p>Main Page link</p>
+        <a href="main.html">main.link</a>
+        <a href="page2.html">Page2.link</a>
+        <h1>Page1</h1>
+        <video id="VE" width="600" height="600" autoplay></video>
+        <script>
+            //The navigator object in JavaScript provides information about the browser and the user's environment. 
+            //It can be used to access details like the user's language, browser name, 
+            //whether cookies are enabled, and more.
+
+            //navigator.userAgent: Returns the user-agent string of the browser, which contains information about the browser and the operating system.
+            document.write("<h3>navigator.userAgent="+navigator.userAgent+"<h1>");
+            //navigator.language: Returns the language of the browser.
+            document.write("<h3>navigator.language="+navigator.language+"<h1>");
+            //navigator.platform: Returns the platform (operating system) on which the browser is running.
+            document.write("<h3>navigator.platform="+navigator.platform+"<h1>");
+            //navigator.onLine: Returns true if the browser is online, and false if it is offline.
+            document.write("<h3>navigator.online="+navigator.onLine+"<h1>");
+            //navigator.geolocation: Provides access to the user's geographic location (latitude and longitude). You can use this to get the user's current position.
+            //document.write("<h3>navigator.geolocation="+navigator.geolocation.getCurrentPosition()+"<h1>");  
+            navigator.geolocation.getCurrentPosition(function(position){
+                document.write("<h3>Latitude="+position.coords.latitude+"<h1>");
+                document.write("<h3>Longitude="+position.coords.longitude+"<h1>"); 
+            })
+            //navigator.mediaDevices: Gives access to connected media devices such as a camera or microphone.
+            navigator.mediaDevices.getUserMedia({video:true}).then(function(stream){
+                let video=document.getElementById("VE");
+                video.sr=stream;
+            }).catch(function(err) {
+                console.error("Error accessing the camera: " + err);
+            });
+        </script>
+    </body>
+</html>
