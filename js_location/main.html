@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Main Page</title>
+    </head>
+    <body>
+        <p>Main Page link</p>
+        <a href="page1.html">Page.link</a>
+        <a href="page2.html">Page2.link</a>
+        <h1>Main Page</h1>
+        <button id="1"><h3>assign</h3></button>
+        <button id="2"><h3>reload</h3></button>
+        <button id="3"><h3>replace</h3></button>
+        <script>
+            /*
+            JavaScript, you can use the location object to access or manipulate the URL of the current webpage. 
+            This object is part of the window object and provides various properties and methods to work with the URL.
+            */
+
+            //window.location.href: The full URL of the current page.
+            document.write("<h1>window.location.href="+window.location.href+"</h1>")
+            //window.location.hostname: The domain name of the web host (e.g., "example.com"
+            document.write("<h1>window.location.hostname="+window.location.hostname+"</h1>")
+            
+            //window.location.pathname: The path and filename of the current page.
+            document.write("<h1>window.location.pathname="+window.location.pathname+"</h1>")
+            
+            //window.location.protocol: The web protocol used (e.g., "http:", "https:").
+            document.write("<h1>window.location.protocol="+window.location.protocol+"</h1>")
+            
+            //window.location.port: The port number used by the web server.
+            document.write("<h1>window.location.port="+window.location.port+"</h1>")
+            
+            //window.location.search: The query string part of the URL (after the ?).
+            //const url=URLSearchParams(window.location.search("BOM"));
+            //const ans=url.get("main")
+            //document.write("<h1>ans="+ans+"</h1>")
+            //var url="https://www.example.com/page.html?id=123&name=JohnDoe&age=25"
+            //document.write("<h1>window.location.search="+url.location.search(url)+"</h1>")
+            console.log(window.location.search);  // e.g., "?id=123&name=John"
+
+            //window.location.hash: The anchor part of a URL (after the #).
+            console.log(window.location.hash);  // e.g., "#section1"
+            //window.location.assign(): Loads a new document by assigning a new URL
+            var btn=document.getElementById(1);
+            btn.addEventListener("click",function(){
+                window.location.assign("https://www.amazon.in");
+            })
+           
+            //window.location.reload(): Reloads the current page
+            var btn=document.getElementById(2);
+            btn.addEventListener("click",function(){
+                window.location.reload();
+            })
+
+            //window.location.replace(): Replaces the current document with a new one (no back navigation)
+            var btn=document.getElementById(3);
+            btn.addEventListener("click",function(){
+                window.location.replace("https://www.chatgpt.com");
+            })
+
+            //window.location.toString(): Returns the full URL as a string.
+            console.log(window.location.toString());  
+        </script>
+    </body>
+</html>
