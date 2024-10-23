@@ -7,9 +7,9 @@
         <a href="page1.html">page1</a>
         <a href="page2.html">page2</a>
         <a href="page3.html">page3</a>
-        <button onclick="goForward()">forwardButton</button>
-        <button onclick="goto()">gotoButton</button>
-        <button onclick="goto2()">goto2Button</button>
+        <button onclick="goForward()">history_forward</button>
+        <button onclick="goto()">history_pushState</button>
+        <button onclick="goto2()">history_replaceState</button>
         <script>
             function goForward(){
                 history.forward();
@@ -27,6 +27,10 @@
             }
             function goto2(){
                 history.replaceState({page:2}, "Page 2", "page2.html")
+                /*
+                The replaceState() method of the History interface modifies the current history entry, 
+                replacing it with the state object and URL passed in the method parameters
+                */
             }
             
         </script>
