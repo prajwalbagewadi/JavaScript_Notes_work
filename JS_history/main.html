@@ -13,6 +13,10 @@
         <script>
             function goForward(){
                 history.forward();
+                /*
+                The history.forward() method loads the next URL (page) in the history list.
+                The history.forward() method only works if a next page exists.
+                */
             }
             function goto(){
                 history.pushState({page:3},"Page 3","page3.html")
