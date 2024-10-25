@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>P1</title>
+    </head>
+    <body>
+        <h1>P1</h1>
+        <a href="main.html">main</a>
+        <script>
+            //view cookie
+            console.log(document.cookie)
+            //update cookie
+            name1="abc"
+            pass1='admin'
+            document.cookie=`name=${name1};path=/;expires=Fri,25 October 2024 12:00:00;`
+            document.cookie=`pass=${pass1};path=/;expires=Fri,25 October 2024 12:00:00;`
+            console.log(document.cookie)
+            //delete cookie
+            document.cookie=`name=${name1};path=/;expires=Fri,25 October 2022 12:00:00;`
+            document.cookie=`pass=${pass1};path=/;expires=Fri,25 October 2022 12:00:00;`
+            console.log("cookie deleted="+document.cookie)
+        </script>
+    </body>
+</html>
