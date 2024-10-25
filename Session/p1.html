@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>P1</title>
+    </head>
+    <body>
+        <h1>P1</h1>
+        <a href="main.html">main</a>
+        <script>
+            /*
+            getItem(): it is worked for retrieving and displaying the session storage element.
+            removeItem(): it displays to delete a specific session storage element.
+            key(): it works to get the name of the data in the session storage position.
+            clear(): it is displayed to remove or clear entire items of the session storage element.
+            */
+            console.log(sessionStorage.getItem('uname'))
+            console.log(sessionStorage.getItem('pass'))
+            console.log(sessionStorage.key(0))
+            console.log(sessionStorage.removeItem('uname'))
+            console.log(sessionStorage.getItem('uname'))
+            console.log(sessionStorage.clear())
+            console.log(sessionStorage.getItem('uname'))
+            console.log(sessionStorage.getItem('pass'))
+        </script>
+    </body>
+</html>
