@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>mainPage</title>
+    </head>
+    <body>
+        <h1>mainPage</h1>
+        <a href="p1.html">p1</a>
+        <script>
+            name="Prajwal"
+            pass="root"
+            /*
+            In web applications, a session refers to a temporary state maintained between the server and the client (typically a web browser) during a user's interaction with the app. Here are some key points about sessions:
+            User Context: Sessions help maintain user context as they navigate through different pages. For example, when a user logs in, their session can store information like their user ID or authentication status.
+            
+            Session Storage: Data can be stored in different ways, such as:
+
+            Cookies: Small pieces of data stored in the user's browser. They can persist between sessions but have size limits.
+            Session Storage: A type of web storage that allows storage of data for the duration of a page session. Data is lost when the tab or browser is closed.
+
+
+            Using sessionStorage
+            Use the window.sessionStorage property of the window object to gain access to the sessionStorage.
+
+            You may easily access the sessionStorage using the following syntax because the window is the global object:
+
+            window.sessionStorage  
+            OR
+            sessionStorage  
+            
+            setItem(): it works to set the information for the session storage element.
+            */
+            sessionStorage.setItem('uname',name)
+            sessionStorage.setItem('pass',pass)
+        </script>    
+    </body>
+</html> 
